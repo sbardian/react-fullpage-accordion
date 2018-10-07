@@ -1,0 +1,33 @@
+{
+  "name": "react-fullpage-accordion",
+  "version": "1.0.0",
+  "description": "fullpage accordion component",
+  "main": "src/index.js",
+  "author": "Brian Andrews",
+  "license": "MIT",
+  "scripts": {
+    "test": "NODE_ENV=test nyc --reporter=text --reporter=lcov mocha --require babel-register --require test/index.js",
+    "lint": "eslint src/**/*.js",
+    "build": "babel src --out-dir lib",
+    "prepublish": "babel src --out-dir lib",
+    "publish": "npm publish"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.3"
+  }
+}
