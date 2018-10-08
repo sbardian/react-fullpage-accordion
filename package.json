@@ -9,12 +9,12 @@
     "test": "NODE_ENV=test nyc --reporter=text --reporter=lcov mocha --require babel-register --require test/index.js",
     "lint": "eslint src/**/*.js",
     "devBuild": "babel-watch src/index.js",
-    "build": "babel src --out-dir lib",
-    "prepublish": "babel src --out-dir lib",
-    "publish": "npm publish"
+    "build": "babel src --out-dir lib --copy-files",
+    "prepublishOnly": "babel src --out-dir lib"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },

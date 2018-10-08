@@ -1,38 +1,41 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import 'normalize.css';
-import './save.css';
+import Panel from './Panel';
+import './styles.css';
 
 class FullpageAccordion extends Component {
-  handleClick = e => {
-    const panels = document.querySelectorAll('.panel');
-    panels.forEach(panel => {
-      if (panel !== this) {
-        panel.classList.remove('open');
-        panel.classList.remove('open-active');
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      activePanel: null,
+    };
+  }
+
+  handleClick = item => {
+    const { activePanel } = this.state;
+    let value = item.target.dataset.key
+      ? item.target.dataset.key
+      : item.target.parentNode.dataset.key;
+    value = value === activePanel ? null : value;
+    this.setState({
+      activePanel: value,
     });
-    e.target.classList.toggle('open');
-    e.target.classList.toggle('open-active');
   };
 
   render() {
-    const { data, height } = this.props;
+    const { items, height } = this.props;
+    const { activePanel } = this.state;
 
     return (
       <div className="panels">
-        {data.map(item => (
-          <div
-            type="button"
+        {items.map(item => (
+          <Panel
             key={item.itemId}
-            className="panel"
-            style={{
-              backgroundImage: `url("${item.imageUrl}")`,
-              height: height || null,
-            }}
+            item={item}
+            height={height}
             onClick={this.handleClick}
-            onKeyDown={this.handleClick}
-            role="button"
-            tabIndex={0}
+            activePanel={activePanel}
           >
             <p>{item.top}</p>
             <p>{item.middle}</p>
@@ -45,11 +48,29 @@ class FullpageAccordion extends Component {
                 {item.bottom}
               </a>
             </p>
-          </div>
+          </Panel>
         ))}
       </div>
     );
   }
 }
+
+FullpageAccordion.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      itemId: PropTypes.number,
+      top: PropTypes.string,
+      middle: PropTypes.string,
+      bottom: PropTypes.string,
+      imageUrl: PropTypes.string,
+    }),
+  ).isRequired,
+  height: PropTypes.string,
+};
+
+FullpageAccordion.defaultProps = {
+  height: null,
+};
 
 export default FullpageAccordion;
