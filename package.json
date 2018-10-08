@@ -6,10 +6,11 @@
   "author": "Brian Andrews",
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test nyc --reporter=text --reporter=lcov mocha --require babel-register --require test/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint src/**/*.js",
     "devBuild": "babel-watch src/index.js",
-    "build": "babel src --out-dir lib --copy-files",
+    "build": "babel src --out-dir lib --ignore \"**/*.test.js\" --copy-files && rm lib/*.test.js",
     "prepublishOnly": "babel src --out-dir lib"
   },
   "dependencies": {
@@ -25,14 +26,20 @@
     "@babel/plugin-transform-arrow-functions": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "eslint": "^5.6.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.24.1",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.3"
+    "jest": "^23.6.0",
+    "prettier": "^1.14.3",
+    "react-testing-library": "^5.2.0",
+    "regenerator-runtime": "^0.12.1"
   }
 }

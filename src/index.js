@@ -24,7 +24,7 @@ class FullpageAccordion extends Component {
   };
 
   render() {
-    const { items, height } = this.props;
+    const { items, height } = this.props
     const { activePanel } = this.state;
 
     return (
