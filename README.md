@@ -2,33 +2,40 @@
 
 ## After doing [Javascript 30](https://javascript30.com/) by Wes Bos, I decided to make his accordion (from lesson 5) a React component! Enjoy.
 
-### Note:  Your React application will need to handle importing `.css` files (e.g. `css-loader` if using `webpack`). 
+### Note: Your React application will need to handle importing `.css` files (e.g. `css-loader` if using `webpack`).
 
-### Install: 
+### Install:
+
 npm:
+
 ```
 npm -i react-fullpage-accordion
 ```
 
 yarn:
+
 ```
 yarn add react-fullpage-accordion
 ```
 
 ### Usage:
+
 ```
 import FullpageAccordion from 'react-fullpage-accordion';
 ```
 
-### Props: 
+### Props:
+
 ```
 <FullpageAccordion
     items={data}   // Required, array of data objects, see below
     height="500px" // Optional, height of panel container
+    textStyle={{ fontSize: '20pt' }} // Optional, any inline css object
 />
 ```
 
 ### Data example:
+
 ```
 const data = [
     {
@@ -74,6 +81,3 @@ const data = [
     }
 ];
 ```
-
-
-
