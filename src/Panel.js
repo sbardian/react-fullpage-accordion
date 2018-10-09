@@ -7,7 +7,7 @@ const Panel = ({ children, height, item, activePanel, onClick }) => (
     key={item.itemId}
     className={`panel ${
       activePanel === item.itemId.toString() ? 'open open-active' : null
-      }`}
+    }`}
     style={{
       backgroundImage: `url("${item.imageUrl}")`,
       height: height || null,

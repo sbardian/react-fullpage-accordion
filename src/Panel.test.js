@@ -23,13 +23,13 @@ describe('Test Panel', async () => {
           {dataSingle.bottom}
         </a>
       </p>
-    </Panel>
+    </Panel>,
   );
   // debug();
   it('Should find one panels div', () => {
-    const firstP = getByText(container, "Hey");
-    const secondP = getByText(container, "Lets");
-    const thirdP = getByText(container, "Dance");
+    const firstP = getByText(container, 'Hey');
+    const secondP = getByText(container, 'Lets');
+    const thirdP = getByText(container, 'Dance');
     expect(firstP).toBeTruthy();
     expect(secondP).toBeTruthy();
     expect(thirdP).toBeTruthy();

@@ -15,4 +15,3 @@ describe('Test FullpageAccordion for panel container div', async () => {
     expect(panels).toHaveLength(5);
   });
 });
-
