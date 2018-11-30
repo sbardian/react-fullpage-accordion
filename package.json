@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "fullpage accordion component",
   "main": "lib/index.js",
-  "author": "Brian Andrews",
+  "author": "Brian Andrews <sbardian@gmail.com> (https://github.com/sbardian)",
   "license": "MIT",
   "scripts": {
     "test": "jest",
@@ -13,6 +13,10 @@
     "devBuild": "babel-watch src/index.js",
     "build": "babel src --out-dir lib --ignore \"**/*.test.js\" --copy-files && rm lib/*.test.js",
     "prepublishOnly": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbardian/react-fullpage-accordion"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
