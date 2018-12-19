@@ -3778,9 +3778,9 @@ react-dom@^16.5.2:
     prop-types "^15.6.2"
     schedule "^0.5.0"
 
-react-testing-library@5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.4.0.tgz#dd3b1ee6f49d6c01daa9435bfac35390ebc03c25"
+react-testing-library@5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/react-testing-library/-/react-testing-library-5.4.1.tgz#8a0757f84bf9c5111cece4e6672a486e499e3221"
   dependencies:
     dom-testing-library "^3.13.1"
 
