@@ -4,7 +4,6 @@ import Panel from './Panel';
 import { dataSingle } from '../__mocks__/mockData';
 
 describe('Test Panel', async () => {
-  // debug();
   it('Should find one panels div', () => {
     const handleClick = jest.fn();
     const { container, debug, getByText } = render(
