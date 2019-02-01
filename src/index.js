@@ -14,12 +14,9 @@ class FullpageAccordion extends Component {
     };
   }
 
-  handleClick = item => {
+  handleClick = id => {
     const { activePanel } = this.state;
-    let value = item.target.dataset.key
-      ? item.target.dataset.key
-      : item.target.parentNode.dataset.key;
-    value = value === activePanel ? null : value;
+    const value = id == activePanel ? null : id;
     this.setState({
       activePanel: value,
     });
@@ -36,7 +33,7 @@ class FullpageAccordion extends Component {
             key={item.itemId}
             item={item}
             height={height}
-            onClick={this.handleClick}
+            onClick={() => this.handleClick(item.itemId)}
             activePanel={activePanel}
           >
             <p style={{ ...textStyle }}>{item.top}</p>

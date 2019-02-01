@@ -6,7 +6,7 @@ const Panel = ({ children, height, item, activePanel, onClick }) => (
     type="button"
     key={item.itemId}
     className={`panel ${
-      activePanel === item.itemId.toString() ? 'open open-active' : null
+      activePanel == item.itemId ? 'open open-active' : null
     }`}
     style={{
       backgroundImage: `url("${item.imageUrl}")`,
@@ -33,7 +33,7 @@ Panel.propTypes = {
   }).isRequired,
   height: PropTypes.string,
   children: PropTypes.node.isRequired,
-  activePanel: PropTypes.string,
+  activePanel: PropTypes.number,
   onClick: PropTypes.func.isRequired,
 };
 
