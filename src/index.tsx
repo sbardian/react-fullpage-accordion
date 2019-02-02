@@ -11,6 +11,7 @@ export interface Item {
   middle: string;
   bottom: string;
   imageUrl: string;
+  link: string;
 }
 
 interface FullpageAccordionProps {
@@ -56,10 +57,7 @@ class FullpageAccordion extends React.Component<
             <p style={{ ...textStyle }}>{item.top}</p>
             <p style={{ ...textStyle }}>{item.middle}</p>
             <p>
-              <a
-                href="https://www.google.com"
-                style={{ zIndex: 20, ...textStyle }}
-              >
+              <a href={item.link} style={{ zIndex: 20, ...textStyle }}>
                 {item.bottom}
               </a>
             </p>

@@ -16,7 +16,7 @@ const Panel: React.FunctionComponent<PanelProps> = ({
   activePanel,
   onClick,
 }) => (
-  <button
+  <div
     key={item.itemId}
     className={`panel ${
       activePanel == item.itemId ? 'open open-active' : null
@@ -32,7 +32,7 @@ const Panel: React.FunctionComponent<PanelProps> = ({
     data-key={item.itemId}
   >
     {children}
-  </button>
+  </div>
 );
 
 export default Panel;
