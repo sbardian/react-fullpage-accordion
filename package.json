@@ -1,6 +1,6 @@
 {
   "name": "react-fullpage-accordion",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "fullpage accordion component",
   "main": "dist/index.js",
   "author": "Brian Andrews <sbardian@gmail.com> (https://github.com/sbardian)",
@@ -20,7 +20,7 @@
     "url": "https://github.com/sbardian/react-fullpage-accordion"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "dependencies": {
     "normalize.css": "^8.0.0",
