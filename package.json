@@ -2,7 +2,7 @@
   "name": "react-fullpage-accordion",
   "version": "1.0.2",
   "description": "fullpage accordion component",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "author": "Brian Andrews <sbardian@gmail.com> (https://github.com/sbardian)",
   "license": "MIT",
   "scripts": {
@@ -10,9 +10,10 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.js",
-    "devBuild": "babel-watch src/index.js",
-    "build": "babel src --out-dir lib --ignore \"**/*.test.js\" --copy-files && rm lib/*.test.js",
-    "prepublishOnly": "babel src --out-dir lib"
+    "devBuild": "babel-watch src/index.tsx",
+    "build": "babel src --out-dir dist --ignore \"**/*.test.js\" --extensions '.tsx' --copy-files",
+    "prepublishOnly": "babel src --out-dir lib",
+    "check-types": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,8 @@
   "dependencies": {
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
@@ -35,6 +36,9 @@
     "@babel/plugin-transform-arrow-functions": "7.2.0",
     "@babel/preset-env": "7.3.1",
     "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/react": "^16.7.22",
+    "@types/react-dom": "^16.0.11",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "24.0.0",
@@ -49,6 +53,7 @@
     "jest": "24.0.0",
     "prettier": "1.16.1",
     "react-testing-library": "5.4.4",
-    "regenerator-runtime": "0.13.1"
+    "regenerator-runtime": "0.13.1",
+    "typescript": "^3.3.1"
   }
 }

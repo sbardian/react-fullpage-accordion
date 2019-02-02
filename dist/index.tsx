@@ -1,13 +1,11 @@
 /* eslint-disable react/forbid-prop-types */
-
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import 'normalize.css';
 import Panel from './Panel';
 import './styles.css';
 
-class FullpageAccordion extends Component {
-  constructor(props) {
+class FullpageAccordion extends React.Component<any, any> {
+  constructor(props: any) {
     super(props);
     this.state = {
       activePanel: null,
@@ -40,9 +38,8 @@ class FullpageAccordion extends Component {
             <p style={{ ...textStyle }}>{item.middle}</p>
             <p>
               <a
-                style={{ zIndex: 20, ...textStyle }}
                 href="https://www.google.com"
-                alt={item.title}
+                style={{ zIndex: 20, ...textStyle }}
               >
                 {item.bottom}
               </a>
@@ -53,25 +50,5 @@ class FullpageAccordion extends Component {
     );
   }
 }
-
-FullpageAccordion.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      itemId: PropTypes.number,
-      top: PropTypes.string,
-      middle: PropTypes.string,
-      bottom: PropTypes.string,
-      imageUrl: PropTypes.string,
-    }),
-  ).isRequired,
-  height: PropTypes.string,
-  textStyle: PropTypes.object,
-};
-
-FullpageAccordion.defaultProps = {
-  height: null,
-  textStyle: {},
-};
 
 export default FullpageAccordion;
