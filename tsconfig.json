@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "outDir": "./dist/",
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
