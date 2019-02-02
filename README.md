@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/sbardian/react-fullpage-accordion/tree/develop.svg?style=shield)](https://circleci.com/gh/sbardian/react-fullpage-accordion/tree/develop)
+
 # Full page (or set height) fancy React accordion
 
 ## After doing [Javascript 30](https://javascript30.com/) by Wes Bos, I decided to make his accordion (from lesson 5) a React component! Enjoy.
