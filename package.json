@@ -12,7 +12,7 @@
     "lint": "eslint src/**/*.js",
     "devBuild": "babel-watch src/index.tsx",
     "build": "babel src --out-dir dist --ignore \"**/*.test.js\" --extensions '.tsx' --copy-files && rm dist/*.test.js",
-    "prepublishOnly": "babel src --out-dir lib",
+    "prepublishOnly": "yarn check-types && yarn build",
     "check-types": "tsc"
   },
   "repository": {
