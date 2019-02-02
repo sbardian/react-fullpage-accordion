@@ -4,6 +4,8 @@
 
 ### Note: Your React application will need to handle importing `.css` files (e.g. `css-loader` if using `webpack`).
 
+CodeSandbox [Demo](https://codesandbox.io/s/r7v9zlrp6n)
+
 ### Install:
 
 npm:
