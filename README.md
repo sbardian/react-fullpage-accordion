@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/sbardian/react-fullpage-accordion/tree/develop.svg?style=shield)](https://circleci.com/gh/sbardian/react-fullpage-accordion/tree/develop) [![Coverage Status](https://coveralls.io/repos/github/sbardian/react-fullpage-accordion/badge.svg?branch=develop)](https://coveralls.io/github/sbardian/react-fullpage-accordion?branch=develop)
+![](https://img.shields.io/circleci/project/github/sbardian/react-fullpage-accordion/develop.svg?style=for-the-badge) ![](https://img.shields.io/coveralls/github/sbardian/react-fullpage-accordion/develop.svg?style=for-the-badge)
 
 # Full page (or set height) fancy React accordion
 
