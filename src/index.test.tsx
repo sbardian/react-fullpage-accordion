@@ -4,7 +4,7 @@ import FullpageAccordion from './index';
 import data from '../__mocks__/mockData';
 
 describe('Test FullpageAccordion for panel container div', async () => {
-  const { container, debug } = render(<FullpageAccordion items={data} />);
+  const { container } = render(<FullpageAccordion items={data} />);
   it('Should find one panels div', () => {
     const panel = container.getElementsByClassName('panels');
     expect(panel).toHaveLength(1);
