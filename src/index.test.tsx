@@ -15,8 +15,15 @@ describe('Test FullpageAccordion for panel container div', async () => {
   });
   it('should click the first panel', async () => {
     const panels = container.getElementsByClassName('panel');
-    const [panel] = panels;
-    fireEvent.click(panel);
-    expect(panel.classList.contains('open')).toBe(true);
+    const [panelOne, panelTwo] = panels;
+    fireEvent.click(panelOne);
+    expect(panelOne.classList.contains('open')).toBe(true);
+    expect(panelTwo.classList.contains('open')).toBe(false);
+    fireEvent.click(panelTwo);
+    expect(panelOne.classList.contains('open')).toBe(false);
+    expect(panelTwo.classList.contains('open')).toBe(true);
+    fireEvent.click(panelTwo);
+    expect(panelOne.classList.contains('open')).toBe(false);
+    expect(panelTwo.classList.contains('open')).toBe(false);
   });
 });
