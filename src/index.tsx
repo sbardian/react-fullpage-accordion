@@ -16,8 +16,8 @@ export interface Item {
 
 interface FullpageAccordionProps {
   items: Item[];
-  height: string;
-  textStyle: CSSProperties;
+  height?: string;
+  textStyle?: CSSProperties;
 }
 
 interface FullpageAccordionState {
@@ -32,9 +32,9 @@ class FullpageAccordion extends React.Component<
     activePanel: -1,
   };
 
-  handleClick = (id: number) => {
+  handleClick = (id: number): void => {
     const { activePanel } = this.state;
-    const value: number = id == activePanel ? -1 : id;
+    const value: number = id === activePanel ? -1 : id;
     this.setState({
       activePanel: value,
     });
