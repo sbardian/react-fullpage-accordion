@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
+    "moduleResolution": "node",
     "target": "esnext",
+    "jsx": "react",
     "outDir": "./dist/",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
     "noEmit": true,
-    "strict": true,
-    "jsx": "react"
+    "strict": true
   },
   "include": ["./src/"]
 }
