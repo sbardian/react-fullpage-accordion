@@ -3,10 +3,10 @@ import { Item } from './index';
 
 interface PanelProps {
   children: any;
-  height: string;
+  height?: string;
   item: Item;
   activePanel: number;
-  onClick: any;
+  onClick: () => void;
 }
 
 const Panel: React.FunctionComponent<PanelProps> = ({
@@ -19,7 +19,7 @@ const Panel: React.FunctionComponent<PanelProps> = ({
   <div
     key={item.itemId}
     className={`panel ${
-      activePanel == item.itemId ? 'open open-active' : null
+      activePanel === item.itemId ? 'open open-active' : null
     }`}
     style={{
       backgroundImage: `url("${item.imageUrl}")`,
