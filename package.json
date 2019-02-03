@@ -6,7 +6,7 @@
   "author": "Brian Andrews <sbardian@gmail.com> (https://github.com/sbardian)",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "lint": "eslint src/**/*.tsx",
