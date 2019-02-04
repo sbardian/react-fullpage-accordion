@@ -9,10 +9,10 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --coverageReporters=text-lcov | coveralls",
-    "lint": "eslint src/**/*.tsx",
+    "lint": "eslint --ext \".js,.ts,.tsx\" .",
     "devBuild": "babel-watch src/index.tsx",
     "build": "babel src --out-dir dist --ignore \"**/*.test.js\" --extensions '.tsx' --copy-files && rm dist/*.test.js",
-    "prepublishOnly": "yarn check-types && yarn build",
+    "prepublishOnly": "yarn check-types && yarn lint && yarn build",
     "check-types": "tsc"
   },
   "repository": {
