@@ -20,10 +20,6 @@ interface FullpageAccordionProps {
   textStyle?: CSSProperties;
 }
 
-interface FullpageAccordionState {
-  activePanel?: number;
-}
-
 const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
   items,
   height,
@@ -31,7 +27,7 @@ const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
 }) => {
   const [activePanel, setActivePanel] = useState(-1);
 
-  const handleClick: (id: number) => void = (id: number) => {
+  const handleClick = (id: number) => {
     const value: number = id === activePanel ? -1 : id;
     setActivePanel(value);
   };
