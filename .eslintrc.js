@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['airbnb', 'prettier'],
+  extends: ['airbnb', 'prettier', 'prettier/@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
@@ -8,7 +8,6 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
   },
   plugins: ['jest', '@typescript-eslint'],
-  extends: ['prettier', 'eslint-config-prettier'],
   env: {
     'jest/globals': true,
   },
