@@ -1,9 +1,5 @@
 html {
   box-sizing: border-box;
-  background: #ffc600;
-  font-family: 'helvetica neue';
-  font-size: 20px;
-  font-weight: 200;
 }
 
 body {
@@ -17,13 +13,11 @@ body {
 }
 
 .panels {
-  min-height: 100vh;
   overflow: hidden;
   display: flex;
 }
 
 .panel {
-  background: #6b0f9c;
   box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
   color: white;
   text-align: center;
