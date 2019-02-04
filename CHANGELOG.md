@@ -1,3 +1,7 @@
+# [v2.0.2](https://github.com/sbardian/react-fullpage-accordion/compare/v2.0.1...v2.0.2)
+
+- Remove base css causing customization problems
+
 # [v2.0.1](https://github.com/sbardian/react-fullpage-accordion/compare/v2.0.0...v2.0.1)
 
 - Add codesandbox link
