@@ -6,6 +6,8 @@
 
 ### Note: Your React application will need to handle importing `.css` files (e.g. `css-loader` if using `webpack`).
 
+### Node: You will need to set any parent elemnts height to 100% and not pass a height prop, if you wish to have a fullpage accordion.
+
 CodeSandbox [Demo](https://codesandbox.io/s/r7v9zlrp6n)
 
 ### Install:
