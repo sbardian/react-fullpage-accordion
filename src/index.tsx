@@ -23,7 +23,7 @@ interface FullpageAccordionProps {
 
 const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
   items,
-  height,
+  height = '100%',
   textStyle,
 }) => {
   const [activePanel, setActivePanel] = useState(-1);
