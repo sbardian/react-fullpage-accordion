@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
 import Panel from './Panel';
 import { dataSingle } from '../__mocks__/mockData';
 

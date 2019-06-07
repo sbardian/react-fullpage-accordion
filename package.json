@@ -37,6 +37,7 @@
     "@babel/preset-env": "7.4.5",
     "@babel/preset-react": "7.0.0",
     "@babel/preset-typescript": "7.3.3",
+    "@testing-library/react": "^8.0.1",
     "@types/jest": "24.0.13",
     "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
@@ -56,7 +57,6 @@
     "eslint-plugin-react": "7.13.0",
     "jest": "24.8.0",
     "prettier": "1.18.2",
-    "react-testing-library": "6.1.2",
     "regenerator-runtime": "0.13.2",
     "ts-jest": "24.0.2",
     "typescript": "3.5.1"
