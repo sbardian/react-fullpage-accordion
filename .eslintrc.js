@@ -6,6 +6,7 @@ module.exports = {
   },
   rules: {
     'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-filename-extension': 'off',
   },
   plugins: ['jest', '@typescript-eslint'],
   env: {
