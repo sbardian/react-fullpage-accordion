@@ -1,12 +1,13 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import Panel from './Panel';
 import { dataSingle } from '../__mocks__/mockData';
 
-describe('Test Panel', async () => {
+describe('Test Panel', () => {
   it('Should find one panels div', () => {
     const handleClick = jest.fn();
-    const { getByText } = render(
+    const { getByText, getByTestId } = render(
       <Panel
         item={dataSingle}
         key={dataSingle.itemId}
@@ -28,7 +29,7 @@ describe('Test Panel', async () => {
     expect(firstP).toBeTruthy();
     expect(secondP).toBeTruthy();
     expect(thirdP).toBeTruthy();
-    // fireEvent.click(container.getElementsByClassName('panel'));
-    // expect(handleClick).toHaveBeenCalledTimes(1);
+    fireEvent.click(getByTestId('panel'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });

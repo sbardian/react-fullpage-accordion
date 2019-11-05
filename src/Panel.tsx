@@ -18,9 +18,8 @@ const Panel: React.FunctionComponent<PanelProps> = ({
 }) => (
   <div
     key={item.itemId}
-    className={`panel ${
-      activePanel === item.itemId ? 'open open-active' : null
-    }`}
+    data-testid="panel"
+    className={`panel${activePanel === item.itemId ? ' open open-active' : ''}`}
     style={{
       backgroundImage: `url("${item.imageUrl}")`,
       height: height || undefined,

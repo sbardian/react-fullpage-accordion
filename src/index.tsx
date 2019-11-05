@@ -34,7 +34,7 @@ const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
   };
 
   return (
-    <div className="panels">
+    <div className="panels" data-testid="panels-container">
       {items.map(item => (
         <Panel
           key={item.itemId}

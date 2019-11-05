@@ -1,20 +1,21 @@
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import React from 'react';
-import { render, fireEvent, waitForElement } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import FullpageAccordion from './index';
 import data from '../__mocks__/mockData';
 
-describe('Test FullpageAccordion for panel container div', async () => {
-  const { container, getByText } = render(<FullpageAccordion items={data} />);
+describe('Test FullpageAccordion for panel container div', () => {
   it('Should find one panels div', () => {
-    const panel = container.getElementsByClassName('panels');
-    expect(panel).toHaveLength(1);
+    const { getByTestId } = render(<FullpageAccordion items={data} />);
+    expect(getByTestId('panels-container')).toBeTruthy();
   });
   it('Should find five panel elements', () => {
-    const panels = container.getElementsByClassName('panel');
-    expect(panels).toHaveLength(5);
+    const { queryAllByTestId } = render(<FullpageAccordion items={data} />);
+    expect(queryAllByTestId('panel')).toHaveLength(5);
   });
   it('should click the first panel', async () => {
-    const panels = container.getElementsByClassName('panel');
+    const { queryAllByTestId } = render(<FullpageAccordion items={data} />);
+    const panels = queryAllByTestId('panel');
     const [panelOne, panelTwo] = panels;
     fireEvent.click(panelOne);
     expect(panelOne.classList.contains('open')).toBe(true);
