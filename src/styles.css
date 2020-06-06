@@ -15,6 +15,7 @@ body {
 .panels {
   overflow: hidden;
   display: flex;
+  cursor: pointer;
 }
 
 .panel {
