@@ -1,15 +1,7 @@
 /* eslint-disable import/no-unresolved, no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Item } from './index';
-
-interface PanelProps {
-  children: any;
-  height?: string;
-  item: Item;
-  activePanel: number;
-  onClick: () => void;
-}
+import { Item, PanelProps } from './@types';
 
 const Panel: React.FunctionComponent<PanelProps> = ({
   children,

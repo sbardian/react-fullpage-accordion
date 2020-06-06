@@ -4,22 +4,7 @@ import PropTypes from 'prop-types';
 import 'normalize.css';
 import Panel from './Panel';
 import './styles.css';
-
-export interface Item {
-  title: string;
-  itemId: number;
-  top: string;
-  middle: string;
-  bottom: string;
-  imageUrl: string;
-  link: string;
-}
-
-interface FullpageAccordionProps {
-  items: Item[];
-  height?: string;
-  textStyle?: CSSProperties;
-}
+import { FullpageAccordionProps, HandleClick } from './@types';
 
 const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
   items,
@@ -28,7 +13,7 @@ const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
 }) => {
   const [activePanel, setActivePanel] = useState(-1);
 
-  const handleClick = (id: number) => {
+  const handleClick: HandleClick = id => {
     const value: number = id === activePanel ? -1 : id;
     setActivePanel(value);
   };
