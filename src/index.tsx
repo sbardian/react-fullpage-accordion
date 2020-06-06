@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types, no-unused-vars, import/no-unresolved */
-import React, { CSSProperties, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import 'normalize.css';
 import Panel from './Panel';
