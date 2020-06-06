@@ -1,6 +1,6 @@
 {
   "name": "react-fullpage-accordion",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "description": "Full page accordion react component",
   "main": "dist/index.js",
   "author": "Brian Andrews <sbardian@gmail.com> (https://github.com/sbardian)",
