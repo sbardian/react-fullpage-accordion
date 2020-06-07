@@ -2,11 +2,11 @@
 
 # Full page (or set height) fancy React accordion
 
-## After doing [Javascript 30](https://javascript30.com/) by Wes Bos, I decided to make his accordion (from lesson 5) a React component! Enjoy.
+## After doing [Javascript 30](https://javascript30.com/) by Wes Bos, I decided to make his accordion (from lesson 5) a React component, with some tweaks! Enjoy.
 
-### Note: Your React application will need to handle importing `.css` files (e.g. `css-loader` if using `webpack`).
+> Your React application will need to handle importing `.css` files (e.g. `css-loader` if using `webpack`), if you care to use the provided/default CSS.
 
-### Node: You will need to set any parent elemnts height to 100% and not pass a height prop, if you wish to have a fullpage accordion.
+> You will need to set any parent elemnts height to 100% or 100vh, and not pass a height prop, if you wish to have a fullpage accordion.
 
 CodeSandbox [Demo](https://codesandbox.io/s/r7v9zlrp6n)
 
@@ -26,69 +26,83 @@ yarn add react-fullpage-accordion
 
 ### Usage:
 
-```
-import FullpageAccordion from 'react-fullpage-accordion';
-```
-
-### Props:
+> Optional/Recommended: import provided/default CSS
 
 ```
-<FullpageAccordion
-    items={data}   // Required, array of data objects, see below
-    height="500px" // Optional, height of panel container
-    textStyle={{ fontSize: '20pt' }} // Optional, any inline css object
-/>
+import "react-fullpage-accordion/react-fullpage-accordion.css"
 ```
 
-### Data example:
+## Example
 
 ```
-const data = [
-    {
-    title: "title1",
-    itemId: 1,
-    top: "Hey",
-    middle: "Lets",
-    bottom: "Dance",
-    imageUrl: "https://source.unsplash.com/gYl-UtwNg_I/1500x1500",
-    link: "https://www.google.com",
-    },
-    {
-    title: "title2",
-    itemId: 2,
-    top: "Give",
-    middle: "Take",
-    bottom: "Receive",
-    imageUrl: "https://source.unsplash.com/rFKUFzjPYiQ/1500x1500",
-    link: "https://www.google.com",
-    },
-    {
-    title: "title3",
-    itemId: 3,
-    top: "Experience",
-    middle: "It",
-    bottom: "Today",
-    imageUrl:
-        "https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d",
-    link: "https://www.google.com",
-    },
-    {
-    title: "title4",
-    itemId: 4,
-    top: "Give",
-    middle: "All",
-    bottom: "You Can",
-    imageUrl: "https://source.unsplash.com/ITjiVXcwVng/1500x1500",
-    link: "https://www.google.com",
-    },
-    {
-    title: "title5",
-    itemId: 5,
-    top: "Life",
-    middle: "In",
-    bottom: "Motion",
-    imageUrl: "https://source.unsplash.com/3MNzGlQM7qs/1500x1500",
-    link: "https://www.google.com",
-    }
-];
+import React from 'react'
+import { FullpageAccordion, Panel } from 'react-fullpage-accordion';
+
+<FullpageAccordion height="500px">
+    <Panel itemId="0" background={'https://source.unsplash.com/rFKUFzjPYiQ/1500x1500'}>
+        <p>Give</p>
+        <p>
+            <a href="/duckPage">
+                Duck!
+            </a>
+        </p>
+        <p>a try!</p>
+    </Panel>
+    <Panel itemId="1" background={'https://source.unsplash.com/ITjiVXcwVng/1500x1500'}>
+        <p>Give</p>
+        <p>
+            <a href="/oberynPage">
+                Oberyn!
+            </a>
+        </p>
+        <p>a try!</p>
+    </Panel>
+</FullpageAccordion>
+```
+
+## Props for `FullpageAccordion` Component:
+
+| prop   | type   | default        | description                   | example | required |
+| ------ | ------ | -------------- | ----------------------------- | ------- | -------- |
+| height | string | 100% of parent | Height of the panel container | '500px' |          |
+
+## Props for Panel Component:
+
+| prop       | type   | default | description      | example                                             | required |
+| ---------- | ------ | ------- | ---------------- | --------------------------------------------------- | -------- |
+| itemId     | string | n/a     | Id for the Panel | '1', 'item-1'                                       | X        |
+| background | string | n/a     | Image source     | 'https://source.unsplash.com/ITjiVXcwVng/1500x1500' |          |
+
+## Information
+
+A `Panel` works best with three (3) children. We transition the first and last children into the panel on click, out again on the second click, or on another panel being clicked. Three children is recommended, but it is not a requirement. You can also override or provide your own CSS for the children, this is just the default behavior.
+
+## Class names
+
+The following are the provided class names if you want to write your own CSS.
+
+| class                  | description      |
+| ---------------------- | ---------------- |
+| panels                 | Panel container  |
+| panel                  | Indivitual panel |
+| panel open open-active | The active panel |
+
+To transition the children our CSS uses the following:
+
+```
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
 ```

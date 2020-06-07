@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import Panel from './Panel';
+import Panel from './panel';
 import { dataSingle } from '../__mocks__/mockData';
 
 describe('Test Panel', () => {

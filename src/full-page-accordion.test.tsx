@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import FullpageAccordion from './index';
+import FullpageAccordion from './full-page-accordion';
 import data from '../__mocks__/mockData';
 
 describe('Test FullpageAccordion for panel container div', () => {

@@ -1,21 +1,8 @@
-html {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 .panels {
   overflow: hidden;
   display: flex;
   cursor: pointer;
+  width: 100%;
 }
 
 .panel {
@@ -27,7 +14,6 @@ body {
   /* Chrome + FF transitionend event.propertyName === flex-grow */
   transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
     flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-  font-size: 20px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -65,18 +51,6 @@ body {
   transform: translateY(0);
 }
 
-.panel p {
-  text-transform: uppercase;
-  font-family: 'Amatic SC', cursive;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  font-size: 2em;
-}
-
-.panel p:nth-child(2) {
-  font-size: 4em;
-}
-
 .panel.open {
-  font-size: 40px;
   flex: 5;
 }
