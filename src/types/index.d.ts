@@ -20,5 +20,6 @@ export interface PanelProviderProps {
   children: React.ReactNode;
 }
 
-export type FullpageAccordion = React.ReactNode;
-export type Panel = React.ReactNode;
+declare const FullpageAccordion: React.FC<FullpageAccordionProps>;
+declare const Panel: React.FC<PanelProps>;
+export { FullpageAccordion, Panel };
