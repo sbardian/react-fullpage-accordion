@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import 'normalize.css';
-import { FullpageAccordionProps } from './@types/index';
+import { FullpageAccordionProps } from './types/index';
 import { PanelContextProvider } from './panel-context';
 
 const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
