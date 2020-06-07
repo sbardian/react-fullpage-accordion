@@ -19,3 +19,6 @@ export interface PanelContextProps {
 export interface PanelProviderProps {
   children: React.ReactNode;
 }
+
+export type FullpageAccordion = React.ReactNode;
+export type Panel = React.ReactNode;
