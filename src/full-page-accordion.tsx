@@ -14,7 +14,7 @@ const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
       <div
         className="panels"
         data-testid="panels"
-        style={{ height: height || '100%' }}
+        style={{ height: height || '100vh' }}
       >
         {children}
       </div>
