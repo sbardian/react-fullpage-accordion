@@ -1,27 +1,23 @@
-export interface Item {
-  title: string;
-  itemId: number;
-  top: string;
-  middle: string;
-  bottom: string;
-  imageUrl: string;
-  link: string;
-}
+import { string } from 'prop-types';
 
 export interface FullpageAccordionProps {
-  items: Item[];
   height?: string;
-  textStyle?: CSSProperties;
+  children: React.ReactNode;
 }
 
 export interface PanelProps {
-  children: any;
-  height?: string;
-  item: Item;
-  activePanel: number;
-  onClick: () => void;
+  children: React.ReactNode;
+  background?: string;
+  itemId: string;
 }
 
-export interface HandleClick {
-  (id: number): void;
+export type PanelClickFn = (itemId: string) => null;
+
+export interface PanelContextProps {
+  activePanel: string;
+  panelClick: PanelClickFn;
+}
+
+export interface PanelProviderProps {
+  children: React.ReactNode;
 }
