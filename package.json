@@ -62,7 +62,7 @@
     "jest": "25.5.4",
     "prettier": "2.0.5",
     "regenerator-runtime": "0.13.5",
-    "ts-jest": "25.5.1",
+    "ts-jest": "26.1.0",
     "typescript": "3.9.5"
   }
 }
