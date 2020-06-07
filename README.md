@@ -29,6 +29,13 @@ yarn add react-fullpage-accordion
 > Optional/Recommended: import provided/default CSS
 
 ```
+import "react-fullpage-accordion/dist/react-fullpage-accordion.css"
+```
+
+In Gatsby
+`gatsby-browser.js
+
+```
 import "react-fullpage-accordion/react-fullpage-accordion.css"
 ```
 
