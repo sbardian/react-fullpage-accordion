@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import PanelContext from './panel-context';
-import { PanelProps } from './@types/index';
+import { PanelProps } from './types/index';
 
 const Panel: React.FunctionComponent<PanelProps> = ({
   children,

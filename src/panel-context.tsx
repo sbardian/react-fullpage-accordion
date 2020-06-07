@@ -5,7 +5,7 @@ import {
   PanelClickFn,
   PanelContextProps,
   PanelProviderProps,
-} from './@types/index';
+} from './types/index';
 
 const PanelContext = React.createContext<PanelContextProps>({
   activePanel: '-1',
