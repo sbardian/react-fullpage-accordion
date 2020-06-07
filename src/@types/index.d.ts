@@ -1,5 +1,3 @@
-import { string } from 'prop-types';
-
 export interface FullpageAccordionProps {
   height?: string;
   children: React.ReactNode;
