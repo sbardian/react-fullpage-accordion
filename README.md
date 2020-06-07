@@ -36,7 +36,7 @@ In Gatsby
 `gatsby-browser.js
 
 ```
-import "react-fullpage-accordion/react-fullpage-accordion.css"
+import "react-fullpage-accordion/dist/react-fullpage-accordion.css"
 ```
 
 ## Example
