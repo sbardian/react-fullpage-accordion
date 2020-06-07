@@ -22,9 +22,13 @@ const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
   );
 };
 
+FullpageAccordion.defaultProps = {
+  height: undefined,
+};
+
 FullpageAccordion.propTypes = {
   children: PropTypes.node.isRequired,
-  height: PropTypes.string.isRequired,
+  height: PropTypes.string,
 };
 
 export default FullpageAccordion;
