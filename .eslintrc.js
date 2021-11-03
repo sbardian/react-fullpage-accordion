@@ -1,10 +1,12 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'prettier/@typescript-eslint'],
+  extends: ['airbnb', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
   },
   rules: {
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
     'import/extensions': [
       'error',
       'ignorePackages',
