@@ -1,6 +1,6 @@
 {
   "name": "react-fullpage-accordion",
-  "version": "4.3.3",
+  "version": "5.0.0",
   "description": "Full page accordion react component",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
