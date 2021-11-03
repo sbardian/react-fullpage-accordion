@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import React from 'react';
+
 export interface FullpageAccordionProps {
   height?: string;
   children: React.ReactNode;
