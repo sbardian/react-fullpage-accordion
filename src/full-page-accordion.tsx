@@ -8,8 +8,8 @@ import { PanelContextProvider } from './panel-context';
 const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
   children,
   height,
-}) => {
-  return (
+}) => 
+   (
     <PanelContextProvider>
       <div
         className="panels"
@@ -20,7 +20,7 @@ const FullpageAccordion: React.FunctionComponent<FullpageAccordionProps> = ({
       </div>
     </PanelContextProvider>
   );
-};
+
 
 FullpageAccordion.defaultProps = {
   height: undefined,
