@@ -15,7 +15,7 @@
     "devBuild": "babel-watch src/index.tsx",
     "build": "babel src --out-dir dist --ignore \"**/*.test.js\" --extensions '.tsx' --copy-files && rm dist/*.test.js",
     "prepublishOnly": "yarn check-types && yarn lint && yarn build",
-    "check-types": "tsc"
+    "check-types": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
