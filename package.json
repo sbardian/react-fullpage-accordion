@@ -41,7 +41,7 @@
     "@babel/preset-typescript": "7.21.4",
     "@testing-library/react": "12.1.5",
     "@types/jest": "27.5.2",
-    "@types/react": "17.0.56",
+    "@types/react": "17.0.57",
     "@types/react-dom": "17.0.19",
     "@typescript-eslint/eslint-plugin": "5.57.1",
     "@typescript-eslint/parser": "5.57.1",
